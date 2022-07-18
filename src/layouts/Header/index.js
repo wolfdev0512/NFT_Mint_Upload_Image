@@ -24,9 +24,10 @@ const Header = () => {
   }, []);
   return (
     <StyledHeader>
-      <div>NFT MINTING</div>
+      <LogoImg src={img} />
       <LinkGroup>
-
+        <LinkSpan to="/">Dashboard</LinkSpan>
+        <LinkSpan to="/create">Create</LinkSpan>
 
         <Account />
       </LinkGroup>

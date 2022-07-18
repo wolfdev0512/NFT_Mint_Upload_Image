@@ -1,0 +1,81 @@
+Dev team & tools
+
+Fernando Cabal -  Project Founder
+                  Produc Owner
+                  Principal Systems Architect
+                  Full Stack
+
+TO Fill        -  Project MAnager
+
+Osada          -  Lead Developer
+                  Full Stack
+                  
+MB                Backend Database 
+                  Backend-Dev Interfaces
+                  Front-end Dev
+
+Will              Front-end Next.JS Dev
+                  DEFI Dashboard aggregator - NFT perspective 
+                  Smart Contract Staking Interface
+                  
+Ephraim           NFT Smart Contract CODE
+                  Back-end Integration
+
+
+==================================================
+
+Private Dev Repo
+     https://vercel.com/aquametaverse/mint-my-files-2
+
+Links to Dev team tools
+
+  Architecture , Brainsorming, Diagrams and UI Designs
+
+  https://www.figma.com/files/project/58501905/Team-project?fuid=1089751598867770183
+
+===========================================
+
+Atlas MongoDB managed DB
+
+https://cloud.mongodb.com/v2/62a162a38241dc4df316fe58#clusters
+
+
+https://downloads.mongodb.com/compass/mongosh-1.5.0-win32-x64.zip
+Mongo-sh connect string
+mongosh "mongodb+srv://mintmyfiles.hvkl2.mongodb.net/myFirstDatabase" --apiVersion 1 --username dev1
+
+
+https://downloads.mongodb.com/compass/mongodb-compass-1.32.2-win32-x64.exe
+https://downloads.mongodb.com/compass/mongodb-compass-1.32.2-darwin-x64.dmg
+
+compass conenct string 
+mongodb+srv://dev2:<password>@mintmyfiles.hvkl2.mongodb.net/test
+
+
+Sample code to connect from node.js
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://dev1:<password>@mintmyfiles.hvkl2.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+------
+
+
+Php 1.3  - 1.4 
+Sample code
+
+$client = new MongoDB\Client(
+    'mongodb+srv://dev2:<password>@mintmyfiles.hvkl2.mongodb.net/?retryWrites=true&w=majority');
+
+$db = $client->test;
+
+
+
+
+

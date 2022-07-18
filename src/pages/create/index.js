@@ -146,7 +146,23 @@ const CreateNFT = () => {
   return (
     <StyledCreateView>
       <Loading flag={loading} />
-      
+      <DashWrapper>
+        <DashContainer>
+          <HeaderSection>
+            <HeaderText>Mint My File</HeaderText>
+            <DescText>
+              After choose the image and enter fields, you can mint a NFT.
+            </DescText>
+            <CreateLink>
+              <Button>Button</Button>
+              <SmallText>Link</SmallText>
+            </CreateLink>
+          </HeaderSection>
+        </DashContainer>
+        <ImgWrapper>
+          <ContainImg src={img} />
+        </ImgWrapper>
+      </DashWrapper>
       <LabelContainer>
         <AnnounceView>
           <Button
@@ -221,7 +237,23 @@ const CreateNFT = () => {
         </MessageGroup>
       </LabelContainer>
       <OptionContainer>
-
+        <SmallText>Visibility </SmallText>
+        <OptionView>
+          <Checkbox style={{ marginRight: "10px" }} />
+          <SmallText>Private</SmallText>
+        </OptionView>
+        <OptionView>
+          <Checkbox style={{ marginRight: "10px" }} />
+          <SmallText>Public Web2</SmallText>
+        </OptionView>
+        <OptionView>
+          <Checkbox checked style={{ marginRight: "10px" }} />
+          <SmallText>Public IPFS</SmallText>
+        </OptionView>
+        <OptionView>
+          <Checkbox style={{ marginRight: "10px" }} />
+          <SmallText>Mobile App</SmallText>
+        </OptionView>
         <OptionGroup>
           <Button onClick={onMint}>Mint</Button>
         </OptionGroup>

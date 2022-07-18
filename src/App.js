@@ -10,12 +10,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import AppLayout from "./layouts/AppLayout";
+const Dashboard = React.lazy(() => import("./pages/dashboard"));
 const Create = React.lazy(() => import("./pages/create"));
 
 // const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
 // const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
-const APP_ID = "NNBTP2L0UGTGrhdi35QjVxFoegNMJLHRDV81tQ93";
-const SERVER_URL = "https://z2arxoceluja.usemoralis.com:2053/server";
+const APP_ID = "gcUW79pGv1faa03qPx8JAtzU4bNm1lvQjlRfygk7";
+const SERVER_URL = "https://n3cnigi8qbyp.usemoralis.com:2053/server";
 
 function App() {
   useEffect(() => {
@@ -33,11 +34,18 @@ function App() {
                 path="/"
                 element={
                   <AppLayout>
-                     <Create />
+                    <Dashboard />
                   </AppLayout>
                 }
               />
-            
+              <Route
+                path="/create"
+                element={
+                  <AppLayout>
+                    <Create />
+                  </AppLayout>
+                }
+              />
             </Routes>
           </Router>
         </Suspense>
